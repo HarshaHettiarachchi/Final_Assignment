@@ -1,0 +1,441 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    	<title>Harry Potter </title>
+
+    	<style>
+
+		 /* RESET */
+        		* {
+            		margin: 0;
+            		padding: 0;
+            		box-sizing: border-box;
+        		}
+
+
+
+		/*BODY*/
+			body {
+    			font-family: "Open Sans", Arial, sans-serif;
+			color:white;
+
+			}
+
+			h1, h2, h3, h4 {
+    			font-family: "Poppins", sans-serif;
+			}
+
+
+
+
+		/* GRID LAYOUT */
+        		.grid_container {
+			display:grid;
+			grid-template-columns:210px 1050px auto ;
+			grid-template-rows:100px 40px ;
+			}
+
+	
+
+			/*LOGO IMAGE*/
+			.logo{
+			grid-row-start:1;
+			grid-row-end:2;
+			grid-column-start:1;
+			grid-column-end:2;
+
+			background: #000000;
+            		color: white;
+            		padding: 10px;
+            		text-align: center;
+			}
+
+
+        		/* HEADER */
+        		.header {
+			grid-row-start:1;
+			grid-row-end:2;
+			grid-column-start:2;
+			grid-column-end:3;
+
+			background: #000000;
+            		color: white;
+            		padding: 10px;
+            		text-align: center;
+			}
+
+			@keyframes logo_effect {
+  			0%   { color: red; }
+  			25%  { color: yellow; }
+  			50%  { color: green; }
+  			75%  { color: blue; }
+  			100% { color: red; }
+			}
+
+			.header h1 {
+  			animation: logo_effect 10000ms infinite 2s ease-in-out;
+			}
+        
+			.header h1{
+			font-size:55px;
+			}
+
+			.header p{
+			font-family: 'Montserrat', sans-serif;
+			font-size:15px;
+			color:yellow;
+			}
+
+
+ 			/* MEMBER */
+			.member button{
+    			grid-row-start: 1;
+   			grid-row-end: 2;
+    			grid-column-start: 3;
+    			grid-column-end: 4;
+
+			margin:40px 25px  ;
+			border:none;
+    			width: 150px;
+			font-size: 20px;
+			border-radius:12px;
+			text-align: center;
+			background-color: gold;
+			box-shadow: 5px 5px 20px rgba(192, 192, 192, 0.5);
+			}
+	
+			.member button:hover{
+			transform: scale(1.02);
+    			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+			}
+
+
+			.member{
+			background: #000000;
+			}
+
+
+
+        	/* NAV */
+       			.nav {
+			grid-row-start:2;
+			grid-row-end:3;
+			grid-column-start:1;
+			grid-column-end:4;
+
+            		background: #C40C0C;
+            		padding: 10px;
+            		text-align: center;
+        		}
+
+        		.nav a {
+            		color: white;
+            		margin: 0 15px;
+            		text-decoration:none;
+            		}
+
+
+
+
+		/* Poster_DETAIL */
+			.poster_details{
+			grid-area: poster_details;
+			background-color: #222222;
+			}
+
+			.poster {
+			display: flex;
+			padding:20px 0 0 0;
+			/*margin:0 80;*/
+  			justify-content: center;
+			}
+
+			.poster img{
+			padding:5px;
+			width: 100%;
+			height: 100%;
+			border-radius: 12px;
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+			transition: transform 0.4s ease, box-shadow 0.4s ease;
+			}
+
+			.poster img:hover{
+			transform: scale(1.02);
+    			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+			}
+			
+			.poster div {
+			margin:0 20px;
+			
+			}
+			
+			.detail h1{
+			color:yellow;
+			}
+			
+			.detail h2{
+			font-size:25px;
+			}
+			
+  			
+		/* REVIEW */
+			.review {
+			background-color: #222222;
+			}	
+
+			.review p, h3{
+			margin:0 100;
+			font-size: 20px;
+			text-align: justify;
+			line-height:1.5;
+			}
+
+			.review h3{
+			color:#F5E7C6;
+			text-align:center;
+			}
+			
+			.detail h2 a{
+			color:green;
+			}
+			
+			.detail ul{
+			font-size:20px;
+			}
+
+			
+			.detail button{
+			margin:auto;
+			padding:0.5px;
+			border:none;
+			border-radius:10px;
+			width: 170px;
+			text-align: center;
+			font-size:25;
+			box-shadow: 5px 5px 10px rgba(31, 85, 255, 0.5);
+			background-color: white;
+			}
+
+			.detail button:hover{
+			transform: scale(1.02);
+    			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+			}
+
+
+		
+		/*COMMENT*/
+			.Comment{
+			text-align: center;
+			font-size: 20px;
+			background-color: #222222;
+			}
+			
+			select, input, textarea {
+			border:none;
+			width: 320px;
+			text-align: center;
+			font-size:20;
+			marging:10px;
+			padding:5px 20px;
+			box-shadow: 0 8px 20px rgba(50, 50, 50, 0.2);
+			/*background-color: #00ADB5;*/
+			}
+
+			.Comment h2{
+			color:#A7E399;
+			}
+			
+			select{
+			background-color: #DCD6F7;
+			}
+
+			input{
+			background-color: #F4EEFF;
+			}
+			
+			textarea{
+			background-color: #A6B1E1;
+			}
+
+			.submitt{
+			background-color: #424874;
+			color:white;
+			}
+	
+		/*FOOTER*/
+			.footer{
+			grid-area:footer;
+			background: #000000;
+            		color: white;
+            		padding: 10px;
+            		text-align: center;
+			background-image: url("footernew.png");
+			opacity: 0.5; 
+  			background-size:cover;
+			}
+
+		/*MEDIA SCREEN*/
+			@media (max-width: 900px) {
+			}
+
+  	
+
+
+
+			@media (max-width: 900px) {
+
+  			.poster {
+    			margin: 0 40px;
+  			}
+
+  			.member button {
+    			margin: 10px auto;
+  			}
+
+  			.review p {
+    			font-size: 18px;
+  			}
+				
+			select, input, textarea {
+    			width: 90%;
+		
+			}
+
+			.header h1 {
+    			font-size: 28px;
+  			}
+
+  			/*.nav a {
+    			display: block;
+    			margin: 10px 0;
+  			}*/
+
+  			.poster img {
+    			max-width: 150px;
+  			}
+	
+	</style>
+
+	<head>     
+ 
+<body>
+
+ 	<section>
+		<div class="grid_container">
+
+			<div class="logo">
+				<a href="index.html">
+				<img src="img\logo.png" alt="logo" width="100" height="100">
+				</a>
+			</div>
+
+			<div class="header">
+       		 		<header>
+           				<h1>MovieZone</h1>
+            				<p> <marquee> Real reviews for real  movie lovers </marquee> </p>
+        			</header>
+			</div>
+
+			<div class="member">
+				<a href="membership.html">
+					<button> MEMBERSHIP<button>
+				</a>
+			</div>
+
+			
+			<nav class="nav">
+            			<a href="index.html">Home</a>
+            			<a href="#">Reviews</a>
+            			<a href="#">Category</a>
+            			<a href="#">News</a>
+				<a href="#">About Us</a>
+				<a href="#">Membership</a>
+        		</nav>
+		</div>
+	</section>
+
+	<section class="poster_details"> 
+		<div class="poster">	
+			<div>	
+				<img src="img\Harry Potter 2.webp">
+			</div>
+		
+			<div class="detail">
+				<br><br>
+				<h1> Harry Potter and the Philosopher’s Stone </h1>
+				
+				<br>
+				<h2><a href="https://www.imdb.com/title/tt0241527/"> IMDb RATING 7.7/10 </a> </h2>
+				
+				<br><br>
+				<a href="https://www.youtube.com/watch?v=VyHV0BRtdxo"><button>🎬 Trailer</button></a> <br><br>
+
+				<a href="https://thepiratebay.org/description.php?id=7390046"><button>⬇️ Download</button></a>
+				
+				<br><br><br>
+					<ul>	
+    						<li> Country : United States </li>
+    						<li> Director : James Gunn </li>
+  						  <li> Year : 2001 </li>
+   						 <li> Category : Superhero / Action / Sci-Fi </li>
+					</ul>
+
+					
+			</div>
+		</div>
+	</section>
+
+	<section class="review"><br><br>
+		<h3> Where Magic and Friendship Begin</h3>
+		<br>
+
+		<p>
+Harry Potter and the Philosopher’s Stone introduces viewers to a magical world hidden within our own. Directed by Chris Columbus, the film begins the legendary Harry Potter series and captures the excitement of discovering magic for the first time. From the very start, it pulls audiences into a world full of wonder.
+<br><br>
+Harry is an orphan living a miserable life with his relatives, the Dursleys. His life changes completely when he learns that he is a wizard and receives an invitation to attend Hogwarts School of Witchcraft and Wizardry. This moment marks the beginning of his journey into a new and extraordinary world.
+<br><br>
+At Hogwarts, Harry forms strong friendships with Ron Weasley and Hermione Granger. Their bond becomes one of the heartwarming strengths of the film, showing the importance of loyalty, teamwork, and trust. Together, they face challenges that test their courage and intelligence.
+<br><br>
+Hogwarts itself feels alive, filled with moving staircases, secret rooms, magical creatures, and hidden dangers. As Harry explores the school, he also learns about his past and his mysterious connection to the dark wizard Voldemort, adding depth and seriousness to the story.
+<br><br>
+Throughout the film, Harry grows braver and more confident. He learns that true bravery is not about being fearless, but about choosing to do what is right, even when it is difficult. These lessons make the story meaningful beyond its magic.
+<br><br>
+Overall, Harry Potter and the Philosopher’s Stone is a heartwarming and magical beginning to an unforgettable series. With memorable music, charming special effects, and a perfect balance of fun and danger, it remains enjoyable for viewers of all ages and reminds us that friendship and courage are the greatest forms of magic.
+</p>
+	</section>
+
+	<section class="Comment"> 
+		<br>
+		<h2> Comment Section </h2>
+		<br>
+		<form>
+			<input type="text" name="Fname"  placeholder="Your Name">
+			<br><br>
+
+			<select>
+            			<option class="aling_center">Rating</option>
+            			<option>⭐</option>
+            			<option>⭐⭐</option>
+            			<option>⭐⭐⭐</option>
+            			<option>⭐⭐⭐⭐</option>
+            			<option>⭐⭐⭐⭐⭐</option>
+        		</select><br><br>
+
+			<textarea name="comments" maxlength="500" placeholder="Your Comment"></textarea>
+			<br><br>
+
+			<input class="submitt" type="submit" value="Submit Review">
+
+		</form><br><br><br><br>
+
+	</section>
+</DIV>
+	
+	<footer class="footer">
+		<br><br>
+			2026 MovieZone | All Rights Reserved
+		<br><br>
+	</footer>   
+</body>
+
+</html>

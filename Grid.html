@@ -1,0 +1,90 @@
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+
+<style>
+
+.container {
+/*height: 100px;*/
+display:grid;
+grid-template-columns:210px 1050px 210px ;
+grid-template-rows:100px 70px 600px 150px;
+/*grid-gap:1px;*/
+}
+
+
+
+
+
+.el1{ 
+background: rgba(255, 0, 0, 0.5);
+grid-row-start:1;
+grid-row-end:2;
+grid-column-start:1;
+grid-column-end:2;
+}
+
+
+.el2{
+background: rgba(255, 255, 0, 0.5); 
+grid-row-start:1;
+grid-row-end:2;
+grid-column-start:2;
+grid-column-end:3;
+}
+
+.el3{
+background: rgba(130, 255, 0, 0.5); 
+grid-row-start:1;
+grid-row-end:2;
+grid-column-start:3;
+grid-column-end:4;
+}
+
+.el4{
+background: rgba(130, 130, 0, 0.5); 
+grid-row-start:2;
+grid-row-end:3;
+grid-column-start:1;
+grid-column-end:4;
+}
+
+.el5{
+background: rgba(130, 130, 130, 0.5); 
+grid-row-start:3;
+grid-row-end:4;
+grid-column-start:1;
+grid-column-end:4;
+}
+
+.el6{
+background: rgba(10, 13, 30, 0.5); 
+grid-row-start:4;
+grid-row-end:5;
+grid-column-start:1;
+grid-column-end:4;
+}
+
+</style>  
+
+
+</head>
+<body>
+
+<div class="container">
+<div class="el1"> Element 1 </div>
+<div class="el2"> Element 2 </div>
+<div class="el3"> Element 3 </div>
+<div class="el4"> Element 4 </div>
+<div class="el5"> Element 5 </div>
+<div class="el6"> Element 6 </div>
+</div>
+
+
+</body>
+</html>

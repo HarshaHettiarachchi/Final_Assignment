@@ -1,0 +1,387 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    	<title>Avatar</title>
+
+    	<style>
+
+		 /* RESET */
+        		* {
+            		margin: 0;
+            		padding: 0;
+            		box-sizing: border-box;
+        		}
+
+
+
+		/*BODY*/
+			body {
+    			font-family: "Open Sans", Arial, sans-serif;
+			
+
+			}
+
+			h1, h2, h3, h4 {
+    			font-family: "Poppins", sans-serif;
+			}
+
+
+
+
+		/* GRID LAYOUT */
+        		.grid_container {
+			display:grid;
+			grid-template-columns:210px 1050px auto ;
+			grid-template-rows:100px 40px ;
+			}
+
+	
+
+			/*LOGO IMAGE*/
+			.logo{
+			grid-row-start:1;
+			grid-row-end:2;
+			grid-column-start:1;
+			grid-column-end:2;
+
+			background: #000000;
+            		color: white;
+            		padding: 10px;
+            		text-align: center;
+			}
+
+
+        		/* HEADER */
+        		.header {
+			grid-row-start:1;
+			grid-row-end:2;
+			grid-column-start:2;
+			grid-column-end:3;
+
+			background: #000000;
+            		color: white;
+            		padding: 10px;
+            		text-align: center;
+			}
+
+			@keyframes logo_effect {
+  			0%   { color: red; }
+  			25%  { color: yellow; }
+  			50%  { color: green; }
+  			75%  { color: blue; }
+  			100% { color: red; }
+			}
+
+			.header h1 {
+  			animation: logo_effect 10000ms infinite 2s ease-in-out;
+			}
+        
+			.header h1{
+			font-size:55px;
+			}
+
+			.header p{
+			font-family: 'Montserrat', sans-serif;
+			font-size:15px;
+			color:yellow;
+			}
+
+
+ 			/* MEMBER */
+			.member button{
+    			grid-row-start: 1;
+   			grid-row-end: 2;
+    			grid-column-start: 3;
+    			grid-column-end: 4;
+
+			margin:40px 25px  ;
+			border:none;
+    			width: 150px;
+			font-size: 20px;
+			border-radius:12px;
+			text-align: center;
+			background-color: gold;
+			box-shadow: 5px 5px 20px rgba(192, 192, 192, 0.5);
+			}
+	
+			.member button:hover{
+			transform: scale(1.02);
+    			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+			}
+
+
+			.member{
+			background: #000000;
+			}
+
+
+
+        	/* NAV */
+       			.nav {
+			grid-row-start:2;
+			grid-row-end:3;
+			grid-column-start:1;
+			grid-column-end:4;
+
+            		background: #C40C0C;
+            		padding: 10px;
+            		text-align: center;
+        		}
+
+        		.nav a {
+            		color: white;
+            		margin: 0 15px;
+            		text-decoration:none;
+            		}
+
+		/*ABOUT US*/
+			.about_us{
+			background: #ABDADC;
+			text-align:center;
+			padding:20px 50px;
+			font-family: Consolas, "Courier New", monospace;
+			
+			}
+
+			.about_us p{
+			font-size:20px;}
+
+		/*CONTACT_US*/
+			.contact_us{
+			text-align:center;
+			}
+		
+
+			.contact{
+			display:flex;
+			justify-content: center;
+			gap: 50px;
+			font-size:18px;
+			padding:20px;
+			color:white;
+			flex-wrap: wrap;
+
+			}
+
+			.contact div{
+			background: black;
+			padding:20px;
+			border-radius:12px;
+			} 
+			
+			.contact p{
+			font-size:15px;
+			font-family: Consolas, "Courier New", monospace;
+			padding:5px;
+			}
+
+			.contact iframe{
+			box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+			}
+
+		/*MEMEBR*/
+			.team {
+    			text-align: center;
+    			padding: 40px 20px;
+			margin: 100px;
+			}
+
+			.team_member {
+    			display: grid;
+    			grid-template-columns: repeat(8, auto);
+    			gap: 20px;
+    			margin: auto;
+			}
+
+			.card {
+    			background: black;
+    			padding: 5px 5px 50px 5px;
+    			border-radius: 15px;
+    			box-shadow: 0 5px 15px rgba(0,255,0,0.5);
+    			transition: transform 0.3s;
+			}
+
+			.card:hover {
+    			transform: scale(1.05);
+			}
+
+			.profile {
+    			width: 100%;
+    			height: 100%;
+    			object-fit: cover;
+    			border-radius: 12px;
+			}
+
+			.card h3 {
+    			margin-top: 10px;
+    			color: white;
+			}
+
+
+			
+		
+
+	
+		/*FOOTER*/
+			.footer{
+			grid-area:footer;
+			background: #000000;
+            		color: white;
+            		padding: 10px;
+            		text-align: center;
+			background-image: url("footernew.png");
+			opacity: 0.5; 
+  			background-size:cover;
+			}
+
+		/*MEDIA SCREEN*/
+			@media (max-width: 900px) {
+			}
+
+  	
+
+
+
+			@media (max-width: 900px) {
+
+  			.poster {
+    			margin: 0 40px;
+  			}
+
+  			.member button {
+    			margin: 10px auto;
+  			}
+
+  			.review p {
+    			font-size: 18px;
+  			}
+				
+			select, input, textarea {
+    			width: 90%;
+		
+			}
+
+			.header h1 {
+    			font-size: 28px;
+  			}
+
+  			/*.nav a {
+    			display: block;
+    			margin: 10px 0;
+  			}*/
+
+  			.poster img {
+    			max-width: 150px;
+  			}
+	
+	</style>
+
+	<head>     
+ 
+<body>
+
+ 	<section>
+		<div class="grid_container">
+
+			<div class="logo">
+				<a href="index.html">
+				<img src="img\logo.png" alt="logo" width="100" height="100">
+				</a>
+			</div>
+
+			<div class="header">
+       		 		<header>
+           				<h1>MovieZone</h1>
+            				<p> <marquee> Real reviews for real  movie lovers </marquee> </p>
+        			</header>
+			</div>
+
+			<div class="member">
+				<a href="membership.html">
+					<button> MEMBERSHIP<button>
+				</a>
+			</div>
+
+			
+			<nav class="nav">
+            			<a href="index.html">Home</a>
+            			<a href="#">Reviews</a>
+            			<a href="#">Category</a>
+            			<a href="#">News</a>
+				<a href="#">About Us</a>
+				<a href="#">Membership</a>
+        		</nav>
+		</div>
+	</section>
+
+
+	<div class="about_us">
+		<br>
+		<h2> ABOUT US </h2>
+		<br>
+		<p> Our website is a digital platform for movie and entertainment enthusiasts worldwide. Started in 2026, it shares movie reviews and information in a clear, user-friendly way.
+
+Developed as an academic<br> web programming project, the site covers movies and TV series across various genres and is designed to grow into a richer platform for a global audience..</p>
+<br>
+	</div>
+
+	<div class="contact_us">
+		<br><br>
+		<h2> CONTACT US </h2>
+
+
+		<div class="contact">
+			<div> 📍 LOCATION <br><br>  <p>Movie Zone (PVT> ltd,<br> Kekirawa<br> 50100,<br> Sri Lanka</p> </div>
+			<div> 📞 CONTACT<br><br><p> +81  90 - 1965 - 5488 <br>+81  70 - 1156 - 4586 </div>
+			<div> 📧 E-MAIL <br><br><p> info@moviezone.com </p> </div>
+			<div> 📘 FACEBOOK <br><br><p><a href="https://www.facebook.com/profile.php?id=61550250936673"> Facebook Group<br> Movie Zone</a> </p></div>
+
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.586741258846!2d80.58259257449052!3d8.04147050366576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afc963381790425%3A0x8b197da64998cf49!2sKekirawa%20Central%20College!5e0!3m2!1sen!2sjp!4v1769339922238!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>	    		
+		</div>
+
+	<div class="team">
+    		<h2>TEAM MEMBERS</h2>
+		<br><br>
+
+    		<div class="team_member">
+        		<div class="card">    
+				<a href="harsha.html">	
+				<img class="profile" src="img/Harsha.jpeg" alt="Harsha">
+				</a>
+            			<h3>Harsha</h3>
+        		</div>
+
+        		<div class="card">
+				<a href="hashani.html">	
+            			<img class="profile" src="img/Hashnai.jpeg" alt="Hashnai"></a>
+            			<h3>Hashani</h3>
+        		</div>
+
+        		<div class="card">
+				<a href="Akila.html">	
+            			<img class="profile" src="img/Akila.jpeg" alt="Akila"></a>
+            			<h3>Akila</h3>
+        		</div>
+
+        		<div class="card">
+				<a href="Anushika.html">	
+            			<img class="profile" src="img/Anushka.jpeg" alt="Anushka"></a>
+            			<h3>Anushka</h3>
+        		</div>
+    		</div>
+	</div>
+
+	
+
+
+
+
+	
+	<footer class="footer">
+		<br><br>
+			2026 MovieZone | All Rights Reserved
+		<br><br>
+	</footer>   
+</body>
+
+</html>

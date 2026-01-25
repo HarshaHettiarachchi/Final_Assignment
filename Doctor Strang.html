@@ -1,0 +1,455 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    	<title>Doctor Strange </title>
+
+    	<style>
+
+		 /* RESET */
+        		* {
+            		margin: 0;
+            		padding: 0;
+            		box-sizing: border-box;
+        		}
+
+
+
+		/*BODY*/
+			body {
+    			font-family: "Open Sans", Arial, sans-serif;
+			color:white;
+
+			}
+
+			h1, h2, h3, h4 {
+    			font-family: "Poppins", sans-serif;
+			}
+
+
+
+
+		/* GRID LAYOUT */
+        		.grid_container {
+			display:grid;
+			grid-template-columns:210px 1050px auto ;
+			grid-template-rows:100px 40px ;
+			}
+
+	
+
+			/*LOGO IMAGE*/
+			.logo{
+			grid-row-start:1;
+			grid-row-end:2;
+			grid-column-start:1;
+			grid-column-end:2;
+
+			background: #000000;
+            		color: white;
+            		padding: 10px;
+            		text-align: center;
+			}
+
+
+        		/* HEADER */
+        		.header {
+			grid-row-start:1;
+			grid-row-end:2;
+			grid-column-start:2;
+			grid-column-end:3;
+
+			background: #000000;
+            		color: white;
+            		padding: 10px;
+            		text-align: center;
+			}
+
+			@keyframes logo_effect {
+  			0%   { color: red; }
+  			25%  { color: yellow; }
+  			50%  { color: green; }
+  			75%  { color: blue; }
+  			100% { color: red; }
+			}
+
+			.header h1 {
+  			animation: logo_effect 10000ms infinite 2s ease-in-out;
+			}
+        
+			.header h1{
+			font-size:55px;
+			}
+
+			.header p{
+			font-family: 'Montserrat', sans-serif;
+			font-size:15px;
+			color:yellow;
+			}
+
+
+ 			/* MEMBER */
+			.member button{
+    			grid-row-start: 1;
+   			grid-row-end: 2;
+    			grid-column-start: 3;
+    			grid-column-end: 4;
+
+			margin:40px 25px  ;
+			border:none;
+    			width: 150px;
+			font-size: 20px;
+			border-radius:12px;
+			text-align: center;
+			background-color: gold;
+			box-shadow: 5px 5px 20px rgba(192, 192, 192, 0.5);
+			}
+	
+			.member button:hover{
+			transform: scale(1.02);
+    			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+			}
+
+
+			.member{
+			background: #000000;
+			}
+
+
+
+        	/* NAV */
+       			.nav {
+			grid-row-start:2;
+			grid-row-end:3;
+			grid-column-start:1;
+			grid-column-end:4;
+
+            		background: #C40C0C;
+            		padding: 10px;
+            		text-align: center;
+        		}
+
+        		.nav a {
+            		color: white;
+            		margin: 0 15px;
+            		text-decoration:none;
+            		}
+
+
+
+
+		/* Poster_DETAIL */
+			.poster_details{
+			grid-area: poster_details;
+			background-color: #222222;
+			}
+
+			.poster {
+			display: flex;
+			padding:20px 0 0 0;
+			/*margin:0 80;*/
+  			justify-content: center;
+			}
+
+			.poster img{
+			padding:5px;
+			width: 100%;
+			height: 100%;
+			border-radius: 12px;
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+			transition: transform 0.4s ease, box-shadow 0.4s ease;
+			}
+
+			.poster img:hover{
+			transform: scale(1.02);
+    			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+			}
+			
+			.poster div {
+			margin:0 20px;
+			
+			}
+			
+			.detail h1{
+			color:yellow;
+			}
+			
+			.detail h2{
+			font-size:25px;
+			}
+			
+  			
+		/* REVIEW */
+			.review {
+			background-color: #222222;
+			}	
+
+			.review p, h3{
+			margin:0 100;
+			font-size: 20px;
+			text-align: justify;
+			line-height:1.5;
+			}
+
+			.review h3{
+			color:#F5E7C6;
+			text-align:center;
+			}
+			
+			.detail h2 a{
+			color:green;
+			}
+			
+			.detail ul{
+			font-size:20px;
+			}
+
+			
+			.detail button{
+			margin:auto;
+			padding:0.5px;
+			border:none;
+			border-radius:10px;
+			width: 170px;
+			text-align: center;
+			font-size:25;
+			box-shadow: 5px 5px 10px rgba(31, 85, 255, 0.5);
+			background-color: white;
+			}
+
+			.detail button:hover{
+			transform: scale(1.02);
+    			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+			}
+
+
+		
+		/*COMMENT*/
+			.Comment{
+			text-align: center;
+			font-size: 20px;
+			background-color: #222222;
+			}
+			
+			select, input, textarea {
+			border:none;
+			width: 320px;
+			text-align: center;
+			font-size:20;
+			marging:10px;
+			padding:5px 20px;
+			box-shadow: 0 8px 20px rgba(50, 50, 50, 0.2);
+			/*background-color: #00ADB5;*/
+			}
+
+			.Comment h2{
+			color:#A7E399;
+			}
+			
+			select{
+			background-color: #DCD6F7;
+			}
+
+			input{
+			background-color: #F4EEFF;
+			}
+			
+			textarea{
+			background-color: #A6B1E1;
+			}
+
+			.submitt{
+			background-color: #424874;
+			color:white;
+			}
+	
+		/*FOOTER*/
+			.footer{
+			grid-area:footer;
+			background: #000000;
+            		color: white;
+            		padding: 10px;
+            		text-align: center;
+			background-image: url("footernew.png");
+			opacity: 0.5; 
+  			background-size:cover;
+			}
+
+		/*MEDIA SCREEN*/
+			@media (max-width: 900px) {
+			}
+
+  	
+
+
+
+			@media (max-width: 900px) {
+
+  			.poster {
+    			margin: 0 40px;
+  			}
+
+  			.member button {
+    			margin: 10px auto;
+  			}
+
+  			.review p {
+    			font-size: 18px;
+  			}
+				
+			select, input, textarea {
+    			width: 90%;
+		
+			}
+
+			.header h1 {
+    			font-size: 28px;
+  			}
+
+  			/*.nav a {
+    			display: block;
+    			margin: 10px 0;
+  			}*/
+
+  			.poster img {
+    			max-width: 150px;
+  			}
+	
+	</style>
+
+	<head>     
+ 
+<body>
+
+ 	<section>
+		<div class="grid_container">
+
+			<div class="logo">
+				<a href="index.html">
+				<img src="img\logo.png" alt="logo" width="100" height="100">
+				</a>
+			</div>
+
+			<div class="header">
+       		 		<header>
+           				<h1>MovieZone</h1>
+            				<p> <marquee> Real reviews for real  movie lovers </marquee> </p>
+        			</header>
+			</div>
+
+			<div class="member">
+				<a href="membership.html">
+					<button> MEMBERSHIP<button>
+				</a>
+			</div>
+
+			
+			<nav class="nav">
+            			<a href="index.html">Home</a>
+            			<a href="#">Reviews</a>
+            			<a href="#">Category</a>
+            			<a href="#">News</a>
+				<a href="#">About Us</a>
+				<a href="#">Membership</a>
+        		</nav>
+		</div>
+	</section>
+
+	
+	<section class="poster_details"> 
+		<div class="poster">	
+			<div>	
+				<img src="img\Doctor 2.webp">
+			</div>
+		
+			<div class="detail">
+				<br><br>
+				<h1> Doctor Strange </h1>
+				
+				<br>
+				<h2><a href="https://www.imdb.com/title/tt1211837/?ref_=fn_t_1"> IMDb RATING 7.5/10 </a> </h2>
+				
+				<br><br>
+				<a href="https://youtu.be/h7gvFravm4A?si=ZVUcM5ymNiLm8g4T"><button>🎬 Trailer</button></a> <br><br>
+
+				<a href="https://thepiratebay.org/description.php?id=79805334"><button>⬇️ Download</button></a>
+				
+				<br><br><br>
+					<ul>	
+    						<li> Country 	: United States </li>
+    						<li> Director 	:  Scott Derrickson </li>
+  						 <li> Year 	: 2016 </li>
+   						 <li> Category : Superhero / Action / Fantasy  </li>
+					</ul>
+
+					
+			</div>
+		</div>
+	</section>
+
+	<section class="review"><br><br>
+		<h3>A Journey Beyond Reality, Time, and the Self</h3>
+		<br>
+
+		<p>
+
+
+Doctor Strange is a unique and visually stunning superhero film that explores magic, time, and alternate realities in a way rarely seen in the Marvel Cinematic Universe. Directed by Scott Derrickson, the movie introduces a very different type of hero—one who relies more on intelligence, wisdom, and strategy than physical strength. This film expands the Marvel universe into a darker and more mystical direction, offering audiences a fresh and thought-provoking experience.
+<br><br>
+The story centers on Dr. Stephen Strange, a world-famous neurosurgeon known for his extraordinary talent and equally large ego. Strange is highly skilled, confident, and arrogant, believing that his hands and mind make him superior to others. His life changes dramatically after a tragic car accident severely damages his hands. The injury ends his medical career and leaves him unable to perform surgery. This sudden fall from success to helplessness marks the emotional core of the film.
+<br><br>
+Unable to accept his fate, Strange spends all his money searching for a cure. His desperation leads him to Nepal, where he hears rumors of a mysterious place capable of healing the impossible. There, he discovers Kamar-Taj, a hidden world of magic and ancient knowledge. This moment shifts the film from a grounded medical drama into a full-scale mystical adventure, opening the door to realities beyond science.
+<br><br>
+At Kamar-Taj, Strange meets the Ancient One, a powerful and wise sorcerer who becomes his mentor. Under her guidance, Strange begins intense training in the mystical arts. At first, he struggles to let go of his ego, but slowly he learns discipline, patience, and humility. His journey is not just about learning magic—it is about transforming as a person. This strong character development makes Doctor Strange one of Marvel’s most well-written origin stories.
+<br><br>
+As Strange’s powers grow, he learns to control magical spells, create portals, and manipulate time using the Eye of Agamotto. Time itself becomes a central theme of the film, raising questions about destiny, responsibility, and consequences. Unlike many superheroes who rely on strength and combat, Strange often uses intelligence and clever thinking to solve problems, making his character stand out in the superhero genre.
+<br><br>
+One of the most impressive aspects of Doctor Strange is its groundbreaking visual effects. The film bends reality in mind-blowing ways—buildings fold in on themselves, cities twist like mirrors, and dimensions overlap in surreal patterns. These visuals are inspired by psychedelic art and make the magic feel powerful and dangerous. Even years after its release, the special effects remain breathtaking and memorable.
+<br><br>
+The action scenes in the movie are creative and different from typical superhero battles. Instead of simple punches and explosions, fights involve magical shields, time loops, mirror dimensions, and reality manipulation. These unique battle sequences keep the audience engaged and make every confrontation feel fresh and unpredictable.
+<br><br>
+The villains in Doctor Strange also add depth to the story. Kaecilius and his followers are not motivated by simple greed or power but by a twisted belief in eternal life. Their actions challenge Strange’s understanding of good and evil, showing that even villains can believe they are doing the right thing. This philosophical conflict adds seriousness and maturity to the film.
+<br><br>
+The supporting characters play important roles as well. Wong provides both wisdom and subtle humor, while Christine Palmer represents Strange’s connection to his former life. Their presence helps ground the story emotionally and reminds viewers of what Strange has lost—and what he may still protect.
+<br><br>
+The film’s music perfectly complements its mystical tone. The soundtrack adds tension, mystery, and emotion, enhancing both quiet moments and epic battles. The score helps define Doctor Strange as a darker, more thoughtful entry in the Marvel universe.
+<br><br>
+At its heart, Doctor Strange is not just a superhero movie—it is a story about personal growth, acceptance, and sacrifice. Strange learns that true heroism is not about fame or power, but about protecting others, even at great personal cost. His decision to face endless suffering to save the world proves that wisdom and selflessness are the greatest strengths of all.
+<br><br>
+Overall, Doctor Strange is a fresh, intelligent, and visually spectacular superhero film. With strong character development, stunning visuals, meaningful themes, and a unique approach to heroism, it stands as one of Marvel’s most creative and memorable movies. It shows that sometimes the greatest battles are not fought with fists, but with courage, wisdom, and the willingness to change..</p>
+	</section>
+
+	<section class="Comment"> 
+		<br>
+		<h2> Comment Section </h2>
+		<br>
+		<form>
+			<input type="text" name="Fname"  placeholder="Your Name">
+			<br><br>
+
+			<select>
+            			<option class="aling_center">Rating</option>
+            			<option>⭐</option>
+            			<option>⭐⭐</option>
+            			<option>⭐⭐⭐</option>
+            			<option>⭐⭐⭐⭐</option>
+            			<option>⭐⭐⭐⭐⭐</option>
+        		</select><br><br>
+
+			<textarea name="comments" maxlength="500" placeholder="Your Comment"></textarea>
+			<br><br>
+
+			<input class="submitt" type="submit" value="Submit Review">
+
+		</form><br><br><br><br>
+
+	</section>
+</DIV>
+	
+	<footer class="footer">
+		<br><br>
+			2026 MovieZone | All Rights Reserved
+		<br><br>
+	</footer>   
+</body>
+
+</html>

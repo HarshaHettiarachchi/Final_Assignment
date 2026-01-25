@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MovieZone</title>
+
+    <style>
+        /* RESET */
+        	* {
+            	margin: 0;
+            	padding: 0;
+            	box-sizing: border-box;
+        	}
+
+	/* BODY */
+        	body {
+            	font-family: Arial, Helvetica, sans-serif;
+		background: #f4f4f4;
+        	}
+
+        /* GRID LAYOUT */
+        	.grid_container {
+		/*height: 100px;*/
+		display:grid;
+		grid-template-columns:210px 1050px auto ;
+		grid-template-rows:100px 40px 40px ;
+		/*grid-gap:1px;*/
+		}
+
+		.grid_container_1 {
+		display:grid;
+		grid-template-columns:auto ;
+		grid-template-rows:auto;
+		grid-gap:10px;
+		}
+
+		.grid_container_2 {
+		display:grid;
+		grid-template-columns:auto ;
+		grid-template-rows:auto;
+		grid-gap:10px;
+		}
+
+		.grid_container_3 {
+		display:grid;
+		grid-template-columns:300px auto ;
+		grid-template-rows:auto;
+		grid-gap:20px;
+		background: #f4f4f4;
+		padding:20px;
+		}
+
+		.grid_container_4 {
+		display:grid;
+		grid-template-columns:300px auto ;
+		grid-template-rows:auto;
+		grid-gap:20px;
+		background: #f4f4f4;
+		padding:20px;
+		}
+
+	/*LOGO IMAGE*/
+		.logo{
+		grid-row-start:1;
+		grid-row-end:2;
+		grid-column-start:1;
+		grid-column-end:2;
+
+		background: #000000;
+            	color: white;
+            	padding: 10px;
+            	text-align: center;
+		}
+
+
+        /* HEADER */
+        	.header {
+		grid-row-start:1;
+		grid-row-end:2;
+		grid-column-start:2;
+		grid-column-end:3;
+
+		background: #000000;
+            	color: white;
+            	padding: 10px;
+            	text-align: center;
+		/*display:flex;*/
+		/*background-image: url("cover_header.png") ;
+  		background-size:cover;
+		Position : relative; */
+		}
+
+		@keyframes logo_effect {
+  		0%   { color: red; }
+  		25%  { color: yellow; }
+  		50%  { color: green; }
+  		75%  { color: blue; }
+  		100% { color: red; }
+		}
+
+		.header h1 {
+  		animation: logo_effect 10000ms infinite 2s ease-in-out;
+		}
+        
+		.header h1{
+		font-size:55px;
+		}
+
+		.header p{
+		font-family: 'Montserrat', sans-serif;
+		font-size:15px;
+		color:yellow;
+		}
+
+
+ 	/* MEMBER */
+		.member button{
+    		grid-row-start: 1;
+   		grid-row-end: 2;
+    		grid-column-start: 3;
+    		grid-column-end: 4;
+
+		margin:40px 25px  ;
+		border:none;
+    		width: 150px;
+		font-size: 20px;
+		border-radius:12px;
+		text-align: center;
+		background-color: gold;
+		box-shadow: 5px 5px 20px rgba(192, 192, 192, 0.5);
+		}
+	
+		.member button:hover{
+		transform: scale(1.02);
+    		box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+		}
+
+
+		.member{
+		background: #000000;
+		}
+
+
+
+        /* NAV */
+       		.nav {
+		grid-row-start:2;
+		grid-row-end:3;
+		grid-column-start:1;
+		grid-column-end:4;
+
+            	background: #C40C0C;
+            	padding: 10px;
+            	text-align: center;
+        	}
+
+        	.nav a {
+            	color: white;
+            	margin: 0 15px;
+            	text-decoration:none;
+            	}
+
+
+
+        /* ALL */
+		.all{
+		grid-row-start:3;
+		grid-row-end:4;
+		grid-column-start:1;
+		grid-column-end:4;
+		padding:10px 20px;
+		background: #f4f4f4;
+		
+
+		}
+
+
+		.all h3{
+		font-family: "Poppins", sans-serif;
+		color:black;
+		}
+		
+		.all h3:hover{
+		color:#C40C0C;
+		}		
+
+
+        /* MAIN CONTENT */
+        	.main {
+		grid-row-start:1;
+		grid-row-end:2;
+		grid-column-start:1;
+		grid-column-span:2;
+            	
+            	padding: 20px;
+		background: #f4f4f4;
+            	display: grid;
+            	grid-template-columns: repeat(8, auto);
+            	gap: 20px;
+        	}
+		
+		
+	  	.movie_card img {
+		width: 100%;
+    		height: 100%;
+		border-radius: 0px;
+ 		display: block;
+    		object-fit: cover;
+		}
+	
+		.movie_card:hover{
+		transform: scale(1.02);
+		box-shadow: 0 5px 10px rgba(0,0, 255, 0.5)
+		}
+
+
+	/* Categories */
+		.categories {
+    		padding: 40px;
+    		text-align: center;
+		color:white;
+		background: #f4f4f4;
+		}
+		
+		
+		.categories h2{
+		font-family: "Poppins", sans-serif;
+		color:black;
+		}
+		
+		.categories h2:hover{
+		color:#C40C0C;
+		}		
+		
+
+		.category-box {
+   	 	display: flex;
+    		justify-content: center;
+    		flex-wrap: wrap;
+    		gap: 15px;
+    		margin-top: 20px;
+		}
+
+		.category-box div {
+   	 	background: #222;
+    		padding: 15px 30px;
+    		border-radius: 5px;
+		}
+
+		.category-box div:hover{
+		transform: scale(1.02);
+		box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5)
+		}
+	
+	
+	/* NEWS FEED */
+
+		.news h2{
+		font-family: "Poppins", sans-serif;
+		background: #f4f4f4;
+		color:black;
+		text-align:center;
+		}
+		
+		.news h2:hover{
+		color:#C40C0C;
+		}		
+
+		
+		.grid_container_3 img {
+		grid-row-start:1;
+		grid-row-end:2;
+		grid-column-start:1;
+		grid-column-end:2;
+
+		width:100%;
+		height:100%;
+		padding:0 0 0 40px;
+    		text-align: center;
+		}
+
+		.grid_container_3 ul {
+		grid-row-start:2;
+		grid-row-end:3;
+		grid-column-start:2;
+		grid-column-end:3;
+
+    		text-align: justify;
+		font-famly:monospace;
+		font-size: 20px;
+		color:black;
+		padding:20px ;
+		box-shadow: 1px 1px 1px rgba(0,0, 0, 0.5)
+		}
+		
+
+		.grid_container_4 img {
+		grid-row-start:1;
+		grid-row-end:2;
+		grid-column-start:1;
+		grid-column-end:2;
+	
+		width:100%;
+		height:100%;
+		padding:0 0 0 40px;
+    		text-align: center;
+		
+		}
+
+		.grid_container_4 p {
+		grid-row-start:2;
+		grid-row-end:3;
+		grid-column-start:2;
+		grid-column-end:3;
+
+    		text-align: justify;
+		font-famly:monospace;
+		font-size: 20px;
+		color:black;
+		padding:20px ;
+		box-shadow: 1px 1px 1px rgba(0,0, 0, 0.5)
+		}
+
+		
+	/*COMMENT*/
+			.Comment{
+			text-align: center;
+			font-size: 20px;
+			/*background-color: #222222;*/
+			}
+			
+			select, input, textarea {
+			border:none;
+			width: 350px;
+			height: 50px;
+			text-align: center;
+			font-size:23px;
+			marging:10px;
+			padding:5px 20px;
+			box-shadow: 0 8px 20px rgba(50, 50, 50, 0.2);
+			/*background-color: #00ADB5;*/
+			}
+
+			.Comment h2{
+			color:#005461;
+			}
+			
+			select{
+			background-color: #DCD6F7;
+			}
+
+			input{
+			background-color: #F4EEFF;
+			}
+			
+			textarea{
+			background-color: #A6B1E1;
+			}
+
+			.submitt{
+			background-color: #424874;
+			color:white;
+			}
+	
+
+		
+
+
+
+
+        /*FOOTER*/
+		.footer{
+		grid-area:footer;
+		background: #000000;
+            	color: white;
+            	padding: 10px;
+            	text-align: center;
+		background-image: url("footernew.png");
+		opacity: 0.5; 
+  		background-size:cover;
+		}
+
+        /* RESPONSIVE */
+        	@media (max-width: 768px) {
+            	.grid_container {
+                grid-template-columns: auto;
+		}
+
+		.grid_container_2 {
+                grid-template-columns: auto;
+		grid-template-columns: auto auto;
+		}
+
+		}
+
+	</style>
+	</head>
+
+<body>
+
+	<section>
+	
+    		<div class="grid_container">
+
+			<div class="logo">
+				<a href="index.html">
+				<img src="img\logo.png" alt="logo" width="100" height="100">
+				</a>
+			</div>
+
+			<div class="header">
+       		 		<header>
+           				<h1>MovieZone</h1>
+            				<p> <marquee> Real reviews for real  movie lovers </marquee> </p>
+        			</header>
+			</div>
+
+			<div class="member">
+				<a href="membership.html">
+					<button> MEMBERSHIP<button>
+				</a>
+			</div>
+
+			
+		
+
+        		<nav class="nav">
+            			<a href="index.html">Home</a>
+            			<a href="#Latest">Reviews</a>
+            			<a href="#cata">Category</a>
+            			<a href="#new">News</a>
+				<a href="about_us.html">About Us</a>
+				<a href="#">Membership</a>
+        		</nav>
+
+
+			<div class="all">
+				
+				<h3 id="Latest"> Latest Reviews <h3>
+			</div>
+	
+		</div>
+	</section>
+
+	<section>
+		<div class="grid_container_2">
+
+        	<div class="main">
+
+		<div class="movie_card">	<a href="avatar.html"> 			<img src="img\Avatar_(2009_film)_poster.jpg"> 	</a>	</div>
+
+		<div class="movie_card">	<a href="superman.html"> 		<img src="img\superman.png"> 			</a>	</div>
+
+            	<div class="movie_card"> 	<a href="Harry_Potter.html"> 		<img src="img\Harry Potter.jpg"> 		</a>	</div>
+
+		<div class="movie_card">	<a href="moana.html"> 			<img src="img\Moana_Teaser_Poster.jpg"> 	</a>	</div>
+
+		<div class="movie_card">	<a href="The Hobbit.html"> 		<img src="img\The Hobbit 1.jpg"> 		</a>	</div>
+
+       		<div class="movie_card">	<a href="Lord of the ring.html"> 	<img src="img\Lord_Rings_Fellowship_Ring.jpg"> 	</a> 	</div>
+
+            	<div class="movie_card">	<a href="Pirates of the Caribbean.html"> <img src="img\Pirates_of_the_Caribbean.png"> 	</a>	</div>
+
+		<div class="movie_card">	<a href="Doctor Strang.html"> 		<img src="img\Doctor 1.jpg"> </div> 		</a>	</div>
+		
+		</div>
+
+		</div>
+
+
+		<div class="grid_container_2">
+
+        	<div class="main">
+
+		<div class="movie_card">	<a href="avatar.html"> 			<img src="img\Avatar_(2009_film)_poster.jpg"> 	</a>	</div>
+
+		<div class="movie_card">	<a href="superman.html"> 		<img src="img\superman.png"> 			</a>	</div>
+
+            	<div class="movie_card"> 	<a href="Harry_Potter.html"> 		<img src="img\Harry Potter.jpg"> 		</a>	</div>
+
+		<div class="movie_card">	<a href="moana.html"> 			<img src="img\Moana_Teaser_Poster.jpg"> 	</a>	</div>
+
+		<div class="movie_card">	<a href="The Hobbit.html"> 		<img src="img\The Hobbit 1.jpg"> 		</a>	</div>
+
+       		<div class="movie_card">	<a href="Lord of the ring.html"> 	<img src="img\Lord_Rings_Fellowship_Ring.jpg"> 	</a> 	</div>
+
+            	<div class="movie_card">	<a href="Pirates of the Caribbean.html"> <img src="img\Pirates_of_the_Caribbean.png"> 	</a>	</div>
+
+		<div class="movie_card">	<a href="Doctor Strang.html"> 		<img src="img\Doctor 1.jpg"> </div> 		</a>	</div>
+		
+		</div>
+
+	</section>
+
+
+
+
+	<section class="categories">
+
+    		<h2 id="cata">Movie Categories</h2>
+
+    			<div class="category-box">
+        			<div>Action</div>
+        			<div>Comedy</div>
+        			<div>Horror</div>
+        			<div>Romance</div>
+        			<div>Sci-Fi</div>
+        			<div>Animation</div><BR><BR><BR><BR>
+    			</div>
+			<div>
+			<br><BR><BR><BR>
+			</div>
+	</section>
+
+
+	<section>
+			<div class="news">
+				
+				<h2 id="new"> News Feed <br><br> </h2>
+
+			</div>
+
+			<div class="grid_container_3">
+				<div>
+				<img src="img\AVATAR_3.jpg">
+				</div>
+				
+				<div>
+				<h3><u><b>Avatar 3</b>, Box Office Highlights (January 2026)</u> </h3>
+				<ul>
+				<li> Avatar: Fire and Ash continues to perform strongly worldwide, having grossed over $1.3 billion globally so 				far, even as new films enter theaters. The movie has topped box office charts multiple weeks in a row and 					remains one of the top grossing films of 2025–26.</li><br>
+
+				<li> Despite strong earnings, Avatar: Fire and Ash has made less than the previous two Avatar films in North 					America, sparking industry analysis about whether changing audience trends or competition affected its 						performance.</li><br>
+
+				<li> After dominating the box office for weeks, the film is starting to slide down as several new releases gain 				traction — but it remains a major commercial success with a long theatrical run.</li><br>
+
+				<li> New releases are also shaking up the chart: Sci-fi action Mercy debuted strongly, taking the #1 spot on 					opening day while Avatar-related earnings continued in its sixth week.</li><br>
+
+				<li> Alongside Avatar, other films like 28 Years Later: The Bone Temple and Zootopia 2 are also competing 					strongly, showing that the global box office is active with both sequels and new genre entries.</li>
+				</div>
+			</div>
+			
+			<br> <br>
+		
+			<div class="grid_container_4">
+				<div>
+				<img src="img\Actor.png">
+				</div>
+				
+				<div>
+				<h3><u>Popular Actor Joins Big Sci-Fi Franchise</u> </h3>
+				<p> 
+				A popular Hollywood actor has officially joined an upcoming big-budget science-fiction franchise, creating major 				excitement among fans and film industry experts around the world. The actor, widely known for delivering 					powerful performances in both action and drama films, is expected to play a central and influential role in the 				movie.
+				<br><br>
+				According to early production reports, the film will be set in a futuristic world filled with advanced 						technology, space travel, and visually stunning environments. The storyline is expected to explore themes such 					as human survival, technological advancement, and the future of civilization, making it one of the most 					anticipated science-fiction projects in development.
+				<br><br>
+				Producers of the film have expressed strong confidence that the actor’s involvement will significantly boost 					global interest and box-office potential. Industry analysts believe that casting a well-known star will help the 				franchise reach a wider international audience, especially fans of science-fiction and action genres.
+				<br><br>
+				While official details about the character remain confidential, sources suggest that the actor’s role will be 					complex and emotionally engaging, adding depth to the film’s narrative. Filming is expected to begin soon, and 					fans can look forward to more announcements, including casting updates, trailers, and release dates, in the 					coming months.
+				</p>
+				</div>
+			</div>
+
+
+	</section>
+
+		<section class="Comment"> 
+		<br>
+		<h2> Comment Section </h2>
+		<br>
+		<form>
+			<input type="text" name="Fname"  placeholder="Your Name">
+			<br><br>
+
+			<select>
+            			<option class="aling_center">Rating</option>
+            			<option>⭐</option>
+            			<option>⭐⭐</option>
+            			<option>⭐⭐⭐</option>
+            			<option>⭐⭐⭐⭐</option>
+            			<option>⭐⭐⭐⭐⭐</option>
+        		</select><br><br>
+
+			<textarea name="comments" maxlength="500" placeholder="Your Comment"></textarea>
+			<br><br>
+
+			<input class="submitt" type="submit" value="Submit Review">
+
+		</form><br><br><br><br>
+
+	</section>
+
+
+
+
+
+
+
+
+
+	<section>
+     		<footer class="footer">
+			<br><br>
+				2026 MovieZone | All Rights Reserved
+			<br><br>
+		</footer>   
+	</section>
+
+	</body>
+
+</html>
